@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebHouse Network</title>
+  <link rel="stylesheet" href="/src/style/main.css">
+</head>
+<body>
+  <canvas id="webhouse-canvas"></canvas>
+
+  <!-- Join Screen -->
+  <div id="join-screen">
+    <div class="join-content">
+      <h1 class="join-title">Web<span>House</span></h1>
+      <p class="join-subtitle">Tu casa en el metaverso</p>
+      <div class="join-form">
+        <input type="text" id="join-name" placeholder="Tu nombre..." maxlength="20" autocomplete="off" spellcheck="false">
+        <button id="join-btn">Entrar al mundo</button>
+      </div>
+      <div class="join-url-row">
+        <input type="text" id="join-url" placeholder="Tu sitio web (ej: bydebourg.com)" maxlength="100" autocomplete="off" spellcheck="false">
+      </div>
+      <div class="join-info">
+        <span>WASD</span> Manejar &nbsp;&middot;&nbsp;
+        <span>Shift</span> Boost &nbsp;&middot;&nbsp;
+        <span>E</span> Entrar a casas
+      </div>
+    </div>
+  </div>
+
+  <!-- Loader -->
+  <div id="loader" class="hidden">
+    <div class="loader-content">
+      <h1>Web<span>House</span></h1>
+      <p>Cargando el mundo...</p>
+      <div class="loader-bar"><div class="loader-fill" id="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- HUD -->
+  <div id="hud">
+    <div class="hud-top">
+      <div class="hud-logo"><span class="pulse-dot"></span> WebHouse Network</div>
+      <div class="hud-badge" id="hud-houses">Conectando...</div>
+    </div>
+    <div class="hud-speed" id="hud-speed">
+      <span class="speed-val">0</span>
+      <span class="speed-unit">KM/H</span>
+    </div>
+    <div class="hud-minimap" id="hud-minimap">
+      <canvas id="minimap-canvas" width="160" height="160"></canvas>
+    </div>
+    <div class="hud-prompt" id="hud-prompt">
+      <span class="key">E</span>
+      <span class="text">Entrar a la casa</span>
+    </div>
+  </div>
+
+  <!-- Website overlay is created dynamically by HUD.js -->
+
+  <script type="module" src="/src/index.js"></script>
+</body>
+</html>

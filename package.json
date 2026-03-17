@@ -1,0 +1,22 @@
+{
+  "name": "webhouse-network",
+  "version": "0.1.0",
+  "description": "Red social 3D descentralizada — cada persona tiene su casa en un mundo navegable",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3000",
+    "server": "node server/index.js",
+    "start": "node server/index.js & vite --port 3000",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3",
+    "three": "^0.164.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}
